@@ -1,0 +1,16 @@
+./mtsieve -s100 -e200000000 -t1 : 0m2.527s
+./mtsieve -s100 -e200000000 -t2 : 0m2.069s
+./mtsieve -s100 -e200000000 -t3 : 0m1.945s
+./mtsieve -s100 -e200000000 -t4 : 0m1.981s
+./mtsieve -s100 -e200000000 -t5 : 0m1.933s
+./mtsieve -s100 -e200000000 -t6 : 0m1.912s
+./mtsieve -s100 -e200000000 -t7 : 0m1.891s
+./mtsieve -s100 -e200000000 -t8 : 0m1.843s
+
+Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz
+
+The time seems to significantly increase after multithreading to 2 threads,
+but then it plateaus to around the same time after adding each consecutive
+new thread. Therefore, I wouldn't say the time scales linearly with the number
+of threads for my processor.
+
