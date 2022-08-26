@@ -1,0 +1,16 @@
+{
+  "name": "homework6",
+  "version": "1.0.0",
+  "description": "Lab 6",
+  "main": "app.js",
+  "scripts": {
+    "seed": "node ./tasks/seed.js",
+    "start": "node app.js"
+  },
+  "author": "Matthew Vaysfeld 10450114",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
+  }
+}

@@ -1,0 +1,23 @@
+<h1>
+  Game Form
+</h1>
+<form id="gameform">
+  <label for="title" id="Title">Title:</label>
+  <input type="text" name="title" id="title" />
+  <label for="description" id="Description">Description:</label>
+  <input type="text" name="description" id="description" />
+  <label for="image" id="Image">Image link:</label>
+  <input type="text" name="image" id="image" />
+  <button type="submit">Submit</button>
+</form>
+<p id="imgerror" hidden></p>
+<p id="error" hidden></p>
+<dl id="addedgame" hidden></dl>
+<a href="/GameCatalog" id="backLink">Back to Game Catalog</a>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/public/js/gameform.js"></script>

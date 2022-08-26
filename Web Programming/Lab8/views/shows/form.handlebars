@@ -1,0 +1,13 @@
+<h1 id="Title">{{title}}</h1>
+        <article id="form">
+          <h2>Description:</h2>
+            <p id="description">
+                This website uses an API in order to retrieve the top 5 shows that refer to the search term inputted. From there you can get more information about the show such as its name, network, and genres.
+            </p>
+            <form method="POST" action="/searchshows">
+                <label for="showsearchTerm" id = "Search">Search:</label>
+                <input type = "text" name="showSearchTerm" id ="showsearchTerm"/>
+                  
+                  <button type="submit">Submit Form</button>
+                </form>
+        </article>

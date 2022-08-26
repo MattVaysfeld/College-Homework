@@ -1,0 +1,19 @@
+{
+  "name": "homework10",
+  "version": "1.0.0",
+  "description": "Lab 10",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Matthew Vaysfeld 10450114",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.4",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mongodb": "^4.5.0"
+  }
+}

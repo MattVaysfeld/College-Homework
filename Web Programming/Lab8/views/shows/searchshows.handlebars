@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+<h2>{{showSearchTerm}}</h2>
+<section>
+  <h2 id="ShowsHeader">Shows Found:</h2>
+    <ul>
+    {{#each shows}}
+    <li>
+      <a href="/show/{{show.id}}">{{show.name}}</a> 
+    </li>
+    {{/each}}
+  </ul>
+  <a href ="/" id="back">Make another search</a>
+  {{#if noTerm}}
+    <p class="error">
+      A search term was not inputted
+    </p>
+  {{/if}}
+  {{#if noResults}}
+    <p class="show-not-found" id="no results">
+     We're sorry, but no results were found for {{showSearchTerm}}.
+    </p>
+  {{/if}}
+</section>

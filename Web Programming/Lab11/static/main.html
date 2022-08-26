@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Show Searcher</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Show Searcher
+        </h1>
+    </header>
+    <p id="searcherror" hidden> Need to enter a search term</p>
+    <form id="searchForm">
+        <label for="search_term">Search:</label>
+        <input type = "text" name="search_term" id ="search_term"/>
+        <button type="submit">Submit</button>
+    </form>
+    <ul id = "showList" hidden></ul>
+    <div id="show" hidden></div>
+    <a href ="/" id="homeLink" hidden>Back to All Shows</a>
+    <footer>
+    <p>Author: Matthew Vaysfeld</p>
+    <p>ID:10450114, Stevens Institute of Technology</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="/public/js/ajaxrequests.js"></script>
+</body>
+    
+
+</html>

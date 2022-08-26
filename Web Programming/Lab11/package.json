@@ -1,0 +1,14 @@
+{
+  "name": "homework11",
+  "version": "1.0.0",
+  "description": "Lab 11",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Matthew Vaysfeld 10450114",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

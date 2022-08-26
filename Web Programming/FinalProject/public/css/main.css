@@ -1,0 +1,282 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #0079d1;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: rgb(4, 79, 141);
+  text-decoration: underline;
+}
+
+/* button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: #118bee;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+} */
+
+/* button:hover,
+button:focus {
+  background: #0f7fdb;
+}
+
+button:focus {
+  outline: 1px solid white;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+} */
+
+#navBar {
+  list-style-type: none;
+  margin: -10px;
+  margin-bottom: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navBar li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+#navBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+#navBar li a:hover {
+  background-color: #111;
+}
+
+
+/* Login/Signup form*/
+
+
+#signuplink,#loginlink{
+	color: #0074c8;
+}
+#errordiv{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+/* https://www.sanwebe.com/2014/08/css-html-forms-designs */
+.form-style{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+}
+.form-style fieldset{
+	border: none;
+}
+.form-style legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+.form-style label {
+	display: block;
+	margin-bottom: 8px;
+}
+.form-style input[type="text"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="password"],
+.form-style textarea,
+.form-style select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="password"]:focus,
+.form-style textarea:focus,
+.form-style select:focus{
+	background: #d2d9dd;
+}
+.form-style select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+.form-style .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.form-style input[type="submit"],
+.form-style input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.form-style input[type="submit"]:hover,
+.form-style input[type="button"]:hover
+{
+	background: #109177;
+}
+
+
+
+a{
+  padding-top: 10px;
+}
+
+#error{
+  color:red;
+}
+
+/* Searchbars */
+
+
+#gamecatalog,#usersearch{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+#gameList, .gameelement, #userlist, .userelement {
+  display:inline;
+  margin-inline: 10px;
+}
+
+#gameList, #userlist, #friendslist{
+	padding-left: 0px;
+}
+
+
+#gamelistdiv{
+	text-align: center;
+}
+
+#gamesearch{
+  padding-top: 10px;
+}
+
+/* details (expandable elements) */
+
+details h4,h3,h2 {
+	display: inline;
+}
+
+.review p, .comment p {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.review .text, .comment .text {
+	text-indent: 20px;
+}
+
+
+/*Home page*/
+h1 { padding-bottom: 15px;
+	font-size: xx-large;
+	font-weight: bold;; }
+
+#home{
+	text-align: center;
+}
+#about{
+	color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; 
+	font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px;
+}
+
+#aboutdiv{
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  align-self: auto;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  padding: 10px;
+}
+
+#recdiv{
+	border: 5px solid gray;
+	align-self: auto;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+#reclist, .recs {
+	text-align: center;
+	display: inline-block;
+	padding:20px
+  }
+
+
+/* Profile Page */
+
+#profile{
+	text-align: center;
+}
+
+#friendslist{
+	padding-left: 0px;
+}
+
+#gameimage{
+	max-width: 50vw;
+	max-height:30vw;
+	min-height:20vw;
+}

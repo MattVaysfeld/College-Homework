@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <title>{{HTML_title}}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
+    <link rel="manifest" href="/public/images/site.webmanifest">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul id="navBar">
+          <li><a href="/">Home</a></li>
+          <li><a href="/gamecatalog">Games</a></li>
+          <li><a href="/users">Users</a></li>
+          {{#if id}}
+            <li><a href="/profile/{{id}}">Profile</a></li>
+            <li><a href="/lists/{{id}}">Lists</a></li>
+            <li><a href="/logout">Logout</a></li>
+          {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+  </body>
+
+</html>

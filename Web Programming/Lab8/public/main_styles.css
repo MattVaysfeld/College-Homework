@@ -1,0 +1,93 @@
+/* rule1 All pages*/
+* {
+	box-sizing: border-box;
+}
+
+/* rule2 All pages*/
+html,
+body {
+	font-size: 16pt;
+}
+
+/* rule3 All pages*/
+body {
+	background: yellowgreen;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* rule4 All pages*/
+li{
+    color:darkgoldenrod;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+/* rule5 searchshows page*/
+h1{
+	color: blueviolet;
+	margin-bottom: 10px;
+}
+#back{
+    color: royalblue;
+    margin-top: 10px;
+    font-size: 22px;
+}
+/* rule6 All pages*/
+h2 {
+	color: green;
+	margin-bottom: 10px;
+}
+
+/* rule5s show page*/
+dt {
+	color: darkslategrey;
+	margin-bottom: 4px;
+}
+
+dd {
+	color: black;
+	margin-bottom: 4px;
+}
+
+/* rule7 Only /*/
+main {
+	max-width: 75%;
+	margin: auto;
+}
+
+/* rule8 Only / */
+#Title{
+    color: #222;
+	margin-bottom: 5px;
+    font-size: 42px;
+}
+
+/* rule9 Only /*/
+#Search{
+    color: blue;
+    font-size: 20px;
+}
+
+/* rule10 Only /*/
+#description{
+    color: darkred;
+    font-size: 28px;
+}
+
+/* rule11 Only /*/
+#form{
+    border: 2px solid #558abb;
+}
+
+/* rule12 Only /*/
+button{
+    color: darkorchid;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#ShowsHeader{
+    color: black;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,80 @@
+.is-prime{
+    color:#00E676
+}
+
+.not-prime{
+    color:#FF3D00
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+.inputClass {
+	border: 3px solid red;
+
+	background-color: #eee;
+}
+
+body {
+    background: lightyellow;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 15pt;
+  }
+  
+header {
+    border-bottom: 1px solid #afafaf;
+}
+  
+h1{
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+  
+p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+}
+
+form{
+    margin-top: 30px;
+}
+
+ul{
+    margin-left: 50px;
+}
+
+label{
+    color:darkmagenta;
+}
+
+
+/* Wanted to make a fun button so refrenced: */
+/* https://fdossena.com/?p=html5cool/buttons/i.frag */
+button{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:darkblue;
+    background-color: lightgreen;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+    background-color:#4095c6;
+}
+  

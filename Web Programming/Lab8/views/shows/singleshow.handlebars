@@ -1,0 +1,25 @@
+<article>
+    <h1>{{name}}</h1>
+    <img alt = "{{name}}" src={{img}} />
+    <dl> 
+    <dt>Language</dt> 
+    <dd>{{lang}}</dd> 
+    <dt>Genres</dt> 
+    <dd> 
+      <ul> 
+        {{#each genres}}
+    <li>
+        {{this}}
+    </li>
+    {{/each}} 
+      </ul> 
+    </dd> 
+    <dt>Average Rating</dt> 
+    <dd>{{rating}}</dd> 
+    <dt>Network</dt> 
+    <dd>{{net}}</dd> 
+    <dt>Summary</dt> 
+    <dd>{{summary}}</dd> 
+  </dl>  
+
+</article>
