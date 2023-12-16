@@ -1,0 +1,111 @@
+#!/bin/bash
+# Sample init script for the scull driver module <rubini@linux.it>
+
+DEVICE="scull"
+
+# The list of filenames and minor numbers: $PREFIX is prefixed to all names
+PREFIX="scull"
+
+INSMOD=/sbin/insmod; # use /sbin/modprobe if you prefer
+
+function device_specific_post_load () {
+    true; # fill at will
+}
+function device_specific_pre_unload () {
+    true; # fill at will
+}
+
+# Everything below this line should work unchanged for any char device.
+# Obviously, however, no options on the command line: either in
+# /etc/${DEVICE}.conf or /etc/modules.conf (if modprobe is used)
+
+# kernel version, used to look for modules
+KERNEL=`uname -r`
+
+# Root or die
+if [ "$(id -u)" != "0" ]
+then
+  echo "You must be root to load or unload kernel modules"
+  exit 1
+fi
+
+MODE=0664
+
+# Create device files
+function create_files () {
+    cd /dev
+    local devlist=$DEVICE
+    local file=$DEVICE
+    mknod $file c $MAJOR 0
+    if [ -n "$OWNER" ]; then chown $OWNER $devlist; fi
+    if [ -n "$GROUP" ]; then chgrp $GROUP $devlist; fi
+    if [ -n "$MODE"  ]; then chmod $MODE  $devlist; fi
+}
+
+# Remove device files
+function remove_files () {
+    cd /dev
+    local devlist=${DEVICE}
+    rm -f $devlist
+    cd - > /dev/null
+}
+
+MY_PATH="`dirname $0`"
+
+# Load and create files
+function load_device () {
+    local devpath=$DEVICE
+
+    if [ -f ./$DEVICE.ko ]; then
+	devpath=./$DEVICE.ko
+    elif [ -f $MY_PATH/$DEVICE.ko ]; then
+	devpath=$MY_PATH/$DEVICE.ko
+    else
+	devpath=$DEVICE
+    fi
+
+    if [ "$devpath" != "$DEVICE" ]; then
+	echo " (loading file $devpath)"
+    fi
+
+    if $INSMOD $devpath $OPTIONS; then
+	MAJOR=`awk "\\$2==\"$DEVICE\" {print \\$1}" /proc/devices`
+	remove_files
+	create_files
+	device_specific_post_load
+    else
+	echo " FAILED!"
+     fi
+}
+
+# Unload and remove files
+function unload_device () {
+    device_specific_pre_unload 
+    /sbin/rmmod $DEVICE
+    remove_files 
+}
+
+
+case "$1" in
+  start)
+     echo -n "Loading $DEVICE"
+     load_device
+     echo "."
+     ;;
+  stop)
+     echo -n "Unloading $DEVICE"
+     unload_device
+     echo "."
+     ;;
+  force-reload|restart)
+     echo -n "Reloading $DEVICE"
+     unload_device
+     load_device
+     echo "."
+     ;;
+  *)
+     echo "Usage: $0 {start|stop|restart|force-reload}"
+     exit 1
+esac
+
+exit 0

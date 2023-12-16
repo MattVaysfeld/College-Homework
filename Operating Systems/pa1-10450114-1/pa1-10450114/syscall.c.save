@@ -1,0 +1,21 @@
+#include <sys/syscall.h>
+#include <unistd.h>
+#include <stdio.h>
+
+long sys_call(char* s){
+	syscall(548,s);
+}
+int main(){
+	char* s1 = "Hello my name is Matthew and I do programming";
+	char* s2 = "Hello";
+	long ans1 = sys_call(s1);
+	printf("Return : %d",ans1);
+	printf("String1 after: %s\n",s1);
+	printf("String2 before: %s\n",s2);
+	long ans2 = sys_call(s2);
+	printf("Return : %d",an
+	printf("String2 after: %s\n",s2);
+	return 0;
+
+
+}
